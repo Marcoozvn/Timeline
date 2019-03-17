@@ -1,0 +1,44 @@
+<div align="center">
+  <mat-card class="example">
+    <mat-card-header>
+      <mat-card-title>
+        Acesso ao Sistema
+      </mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="nome@email.com" formControlName="login" type="email">
+          <mat-error *ngIf="formulario.controls.login.hasError('email') && !formulario.controls.login.hasError('required')">
+            Insira um endereco de email válido.
+          </mat-error>
+          <mat-error *ngIf="formulario.controls.login.hasError('required')">
+            Email é um <strong>campo obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Senha" formControlName="password" type="password">
+          <mat-error *ngIf="formulario.controls.password.hasError('minlength') && !formulario.controls.password.hasError('required')">
+            A senha deve conter ao menos 8 caracteres
+          </mat-error>
+          <mat-error *ngIf="formulario.controls.password.hasError('required')">
+            A senha é um <strong>campo obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+        <div class="row">
+          <button mat-raised-button type="submit" color='primary' [disabled]="!formulario.valid">Login</button>
+        </div>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <div class="register">
+          <span>Ainda não é cadastrado?</span>
+          <button mat-button color="primary" routerLink="/register">Registro</button>
+        </div>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
+

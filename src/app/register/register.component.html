@@ -1,0 +1,45 @@
+<div align="center">
+  <mat-card>
+    <mat-card-header>
+      <i mat-card-avatar class="material-icons">person</i>
+      <mat-card-title>
+        Registro
+      </mat-card-title>
+    </mat-card-header>
+
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="Nome" type="text" formControlName="nome">
+          <mat-error *ngIf="formulario.controls.nome.hasError('required')">
+            Nome é um <strong>campo obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="nome@email.com" formControlName="email" type="email">
+          <mat-error *ngIf="formulario.controls.email.hasError('email') && !formulario.controls.email.hasError('required')">
+            Insira um endereco de email válido.
+          </mat-error>
+          <mat-error *ngIf="formulario.controls.email.hasError('required')">
+            Email é um <strong>campo obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Senha" formControlName="password" type="password">
+          <mat-error *ngIf="formulario.controls.password.hasError('minlength') && !formulario.controls.password.hasError('required')">
+            A senha deve conter ao menos 8 caracteres
+          </mat-error>
+          <mat-error *ngIf="formulario.controls.password.hasError('required')">
+            A senha é um <strong>campo obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Registrar</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

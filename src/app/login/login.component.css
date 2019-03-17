@@ -1,0 +1,19 @@
+.example {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.mat-form-field {
+  width: 100%;
+}
+.mat-card {
+  max-width: 60%;
+  margin: 2em;
+}
+.mat-raised-button {
+  margin: 1em;
+}
+
+.register {
+  margin-top: 16px;
+}
