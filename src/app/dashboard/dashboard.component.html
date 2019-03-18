@@ -1,4 +1,13 @@
-<p>
-  dashboard works!
-</p>
+<mat-toolbar color="primary">
+  <span>Timeline</span>
+  <span class="fill-space"></span>
+  <button mat-button routerLink="account">
+    <div class="material-icons">person</div>
+    Perfil
+  </button>
+  <button mat-button (click)="logout()">
+    <div class="material-icons">power_settings_new</div>
+    Logout
+  </button>
+</mat-toolbar>
 <router-outlet></router-outlet>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { AuthService } from './auth.service';
+import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private http: HttpClient,
               private service: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private toast: ToastrService) { }
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
@@ -26,10 +28,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.service.autenticate(this.formulario.value)) {
+    const user = this.service.authenticate(this.formulario.value);
+
+    if (user) {
+      this.toast.success('Login feito com sucesso!');
       this.router.navigate(['/dashboard']);
     } else {
-      alert('falha ao autenticar');
+      this.toast.error('Credenciais inválidas!');
     }
   }
 }
