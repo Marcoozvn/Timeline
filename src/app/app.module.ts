@@ -11,7 +11,8 @@ import {
   MatButtonModule,
   MatRadioModule,
   MatDividerModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatListModule, MatExpansionModule, MatIconModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -22,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AccountComponent } from './account/account.component';
 import { AcontecimentoComponent } from './acontecimento/acontecimento.component';
+import {AcontecimentoService} from "./acontecimento/acontecimento.service";
 
 @NgModule({
   declarations: [
@@ -49,9 +51,12 @@ import { AcontecimentoComponent } from './acontecimento/acontecimento.component'
     ToastrModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    MatExpansionModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [AcontecimentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

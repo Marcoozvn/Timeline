@@ -41,5 +41,10 @@
         <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Registrar</button>
       </mat-card-actions>
     </form>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="go-to-login">
+      <span>Já possui um cadastro?</span>
+      <button mat-button color="primary" routerLink="/login">Login</button>
+    </mat-card-footer>
   </mat-card>
 </div>

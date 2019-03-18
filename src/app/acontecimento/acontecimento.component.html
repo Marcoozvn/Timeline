@@ -1,3 +1,22 @@
-<p>
-  acontecimento works!
-</p>
+<mat-list>
+  <h3 mat-subheader>Acontecimentos</h3>
+  <mat-accordion class='basic-list' *ngFor="let acontecimento of acontecimentos">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{acontecimento.nome}}</mat-panel-title>
+        <mat-panel-description>
+          <span>Criado em {{acontecimento.data}}</span>
+          <div class="fill-space"></div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>{{acontecimento.descricao}}</p>
+      <div style="float: right" (click)="delete(acontecimento)">
+      <span>Excluir acontecimento
+      <mat-icon class="material-icons">delete</mat-icon>
+      </span>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-list>
