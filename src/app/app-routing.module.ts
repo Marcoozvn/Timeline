@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './authentication/auth.guard';
 import {AccountComponent} from "./account/account.component";
+import {AcontecimentoFormComponent} from "./acontecimento/criar/acontecimento-form.component";
 
 const routes: Routes = [
 
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
       {path: 'home', component: HomeComponent},
       {path: 'account', component: AccountComponent},
+      {path: 'acontecimento', component: AcontecimentoFormComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'}
     ]},
   {path: '', redirectTo: '/login', pathMatch: 'full'}

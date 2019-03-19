@@ -1,7 +1,7 @@
 export class AcontecimentoModel {
   private nome: string;
   private descricao: string;
-  private data: string;
+  private data: Date;
   private cor: string;
 
   constructor (nome, descricao, data, cor) {

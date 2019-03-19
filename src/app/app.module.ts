@@ -12,7 +12,7 @@ import {
   MatRadioModule,
   MatDividerModule,
   MatToolbarModule,
-  MatListModule, MatExpansionModule, MatIconModule
+  MatListModule, MatExpansionModule, MatIconModule, MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -58,9 +58,11 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatListModule,
     MatIconModule,
     MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     ToastrModule.forRoot()
   ],
-  providers: [AcontecimentoService],
+  providers: [AcontecimentoService, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
