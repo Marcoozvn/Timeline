@@ -1,3 +1,7 @@
 .fill-space {
   flex: 1 1 auto;
 }
+.timeline-image {
+  background-image: url("../../resources/symbols-39343__340.png");
+  background-size: cover;
+}

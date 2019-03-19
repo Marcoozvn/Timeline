@@ -1,13 +1,37 @@
-<mat-toolbar color="primary">
-  <span>Timeline</span>
-  <span class="fill-space"></span>
-  <button mat-button routerLink="account">
-    <div class="material-icons">person</div>
-    Perfil
-  </button>
-  <button mat-button (click)="logout()">
-    <div class="material-icons">power_settings_new</div>
-    Logout
-  </button>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<div fxLayout="column">
+  <mat-toolbar color="primary">
+    <span class="fill-space"></span>
+    <button mat-button routerLink="account">
+      <div class="material-icons">person</div>
+      Perfil
+    </button>
+    <button mat-button (click)="logout()">
+      <div class="material-icons">power_settings_new</div>
+      Logout
+    </button>
+  </mat-toolbar>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between none" style="padding: 8px" fxFill>
+  <mat-card fxFlex="20">
+    <mat-card-header routerLink="home">
+      <div mat-card-avatar class="timeline-image"></div>
+      <mat-card-title>Timeline</mat-card-title>
+      <mat-card-subtitle>Seja bem vindo!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <mat-list>
+        <mat-list-item mat-subheader>Quem somos nós</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item mat-subheader>Contato</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item mat-subheader>Clientes</mat-list-item>
+      </mat-list>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-card-subtitle mat-subheader>Desenvolvido por Marcos Cesar</mat-card-subtitle>
+    </mat-card-footer>
+  </mat-card>
+  <router-outlet fxFlex></router-outlet>
+</div>
+
+

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import { AcontecimentoModel } from './acontecimento.model';
-import {AcontecimentoService} from "./acontecimento.service";
+import { AcontecimentoModel } from '../model/acontecimento.model';
+import {AcontecimentoService} from "../acontecimento.service";
 
 @Component({
   selector: 'app-acontecimento',

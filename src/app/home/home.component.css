@@ -1,3 +1,6 @@
 .basic-container {
   padding: 30px;
 }
+.floating-button{
+  float: right;
+}

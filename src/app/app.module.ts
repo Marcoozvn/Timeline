@@ -22,8 +22,10 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AccountComponent } from './account/account.component';
-import { AcontecimentoComponent } from './acontecimento/acontecimento.component';
+import { AcontecimentoComponent } from './acontecimento/listagem/acontecimento.component';
 import {AcontecimentoService} from "./acontecimento/acontecimento.service";
+import { AcontecimentoFormComponent } from './acontecimento/criar/acontecimento-form.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import {AcontecimentoService} from "./acontecimento/acontecimento.service";
     HomeComponent,
     DashboardComponent,
     AccountComponent,
-    AcontecimentoComponent
+    AcontecimentoComponent,
+    AcontecimentoFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
