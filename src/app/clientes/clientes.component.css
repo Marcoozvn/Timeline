@@ -1,0 +1,20 @@
+.header-avatar {
+  background-size: cover;
+}
+.image1 {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+}
+.image2 {
+  background-image: url('https://img.estadao.com.br/thumbs/640/resources/jpg/5/2/1523885965125.jpg');
+}
+.image3 {
+  background-image: url('https://uploads.metropoles.com/wp-content/uploads/2017/01/05164954/Wolverine.jpg');
+}
+.image4 {
+  background-image: url('https://img.estadao.com.br/thumbs/640/resources/jpg/5/9/1490910836195.jpg');
+}
+.mat-card {
+  padding: 16px;
+  width: 400px;
+  height: 100px;
+}

@@ -2,5 +2,7 @@
   padding: 30px;
 }
 .floating-button{
-  float: right;
+  right: 16px;
+  bottom: 16px;
+  position: fixed;
 }

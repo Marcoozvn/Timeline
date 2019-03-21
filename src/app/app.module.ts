@@ -12,7 +12,7 @@ import {
   MatRadioModule,
   MatDividerModule,
   MatToolbarModule,
-  MatListModule, MatExpansionModule, MatIconModule, MatDatepickerModule, MatNativeDateModule
+  MatListModule, MatExpansionModule, MatIconModule, MatDatepickerModule, MatNativeDateModule, MatGridListModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -26,6 +26,7 @@ import { AcontecimentoComponent } from './acontecimento/listagem/acontecimento.c
 import {AcontecimentoService} from "./acontecimento/acontecimento.service";
 import { AcontecimentoFormComponent } from './acontecimento/criar/acontecimento-form.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     DashboardComponent,
     AccountComponent,
     AcontecimentoComponent,
-    AcontecimentoFormComponent
+    AcontecimentoFormComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatGridListModule,
     ToastrModule.forRoot()
   ],
   providers: [AcontecimentoService, MatDatepickerModule],

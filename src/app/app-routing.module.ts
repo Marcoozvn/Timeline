@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './authentication/auth.guard';
 import {AccountComponent} from "./account/account.component";
 import {AcontecimentoFormComponent} from "./acontecimento/criar/acontecimento-form.component";
+import {ClientesComponent} from "./clientes/clientes.component";
 
 const routes: Routes = [
 
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'account', component: AccountComponent},
       {path: 'acontecimento', component: AcontecimentoFormComponent},
+      {path: 'clientes', component: ClientesComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'}
     ]},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
